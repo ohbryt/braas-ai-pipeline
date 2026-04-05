@@ -120,6 +120,58 @@ class IntentType(str, Enum):
     UNKNOWN = "unknown"
 
 
+class AnomalyLevel(str, Enum):
+    """Anomaly severity levels."""
+    INFO = "info"
+    WARNING = "warning"
+    CRITICAL = "critical"
+    EMERGENCY = "emergency"
+
+
+class EquipmentType(str, Enum):
+    """Lab equipment types."""
+    LIQUID_HANDLER = "liquid_handler"
+    PLATE_READER = "plate_reader"
+    THERMOCYCLER = "thermocycler"
+    INCUBATOR = "incubator"
+    CENTRIFUGE = "centrifuge"
+    ROBOTIC_ARM = "robotic_arm"
+    MICROSCOPE = "microscope"
+    sequencer = "sequencer"
+    CELL_SORTER = "cell_sorter"
+    STORAGE_ROBOT = "storage_robot"
+
+
+class Priority(str, Enum):
+    """Experiment priority levels."""
+    LOW = "low"
+    MEDIUM = "medium"
+    HIGH = "high"
+    URGENT = "urgent"
+
+
+class ReagentType(str, Enum):
+    """Types of reagents and consumables."""
+    ANTIBODY = "antibody"
+    ENZYME = "enzyme"
+    SUBSTRATE = "substrate"
+    BUFFER = "buffer"
+    MEDIUM = "medium"
+    SERUM = "serum"
+    PRIMER = "primer"
+    PROBE = "probe"
+    KIT = "kit"
+    CHEMICAL = "chemical"
+
+
+class SafetyLevel(str, Enum):
+    """Safety levels (alias for BiosafetyLevel)."""
+    BSL1 = "BSL-1"
+    BSL2 = "BSL-2"
+    BSL3 = "BSL-3"
+    BSL4 = "BSL-4"
+
+
 class RobotAction(str, Enum):
     """Robot instruction action types."""
     ASPIRATE = "aspirate"
@@ -135,3 +187,37 @@ class RobotAction(str, Enum):
     READ_PLATE = "read_plate"
     PAUSE = "pause"
     COMMENT = "comment"
+
+
+class IntentType(str, Enum):
+    """Classified intent types from NLP intake."""
+    NEW_EXPERIMENT = "new_experiment"
+    REPEAT_EXPERIMENT = "repeat_experiment"
+    OPTIMIZATION = "optimization"
+    TROUBLESHOOTING = "troubleshooting"
+    COMPARISON = "comparison"
+    SCREENING = "screening"
+    DRUG_SCREENING = "drug_screening"
+    TARGET_IDENTIFICATION = "target_identification"
+    LEAD_OPTIMIZATION = "lead_optimization"
+    UNKNOWN = "unknown"
+
+
+class ValidationStatus(str, Enum):
+    """Validation check result status."""
+    PASS = "pass"
+    WARN = "warn"
+    FAIL = "fail"
+
+
+class PipelineStage(str, Enum):
+    """Stages of the BRaaS pipeline."""
+    INTAKE = "intake"
+    PROTOCOL_DESIGN = "protocol_design"
+    VALIDATION = "validation"
+    SCHEDULING = "scheduling"
+    EXECUTION = "execution"
+    MONITORING = "monitoring"
+    ANALYSIS = "analysis"
+    REPORTING = "reporting"
+    LEARNING = "learning"

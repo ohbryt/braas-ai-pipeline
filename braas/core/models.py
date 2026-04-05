@@ -37,6 +37,53 @@ def _uuid_hex() -> str:
     return uuid.uuid4().hex
 
 
+# -------------------------------------------------------------------
+# Intake Models
+# -------------------------------------------------------------------
+
+
+class ParsedEntity(BaseModel):
+    """Extracted entity from natural language request."""
+    type: str = Field(description="Entity type: protein, gene, organism, etc.")
+    value: str = Field(description="Entity value")
+    confidence: float = Field(default=1.0, ge=0.0, le=1.0)
+
+
+class IntakeRequest(BaseModel):
+    """Natural language experiment request."""
+    text: str = Field(description="Raw text input from user")
+    entities: list[ParsedEntity] = Field(default_factory=list)
+    experiment_type: str | None = Field(default=None)
+    intent: str = Field(default="new_experiment")
+    metadata: dict[str, Any] = Field(default_factory=dict)
+
+
+class IntakeResult(BaseModel):
+    """Result of parsing a natural language experiment request."""
+    experiment_type: str | None = None
+    target_protein: str | None = None
+    organism: str | None = None
+    sample_type: str | None = None
+    sample_count: int | None = None
+    special_requirements: list[str] = Field(default_factory=list)
+    entities: list[ParsedEntity] = Field(default_factory=list)
+    confidence: float = 0.0
+    warnings: list[str] = Field(default_factory=list)
+    raw_text: str = ""
+
+
+class ExperimentRecommendation(BaseModel):
+    """Recommended experiment type based on research goal."""
+    experiment_type: str = Field(description="Recommended experiment type")
+    name: str = Field(description="Human-readable name")
+    description: str = Field(description="Description of the experiment")
+    estimated_cost: float = Field(description="Estimated cost in USD")
+    estimated_time_hours: float = Field(description="Estimated time in hours")
+    success_probability: float = Field(description="Estimated success probability 0-1")
+    rationale: str = Field(description="Why this experiment is recommended")
+    alternatives: list[str] = Field(default_factory=list, description="Alternative experiment types")
+
+
 # ---------------------------------------------------------------------------
 # Protocol & Steps
 # ---------------------------------------------------------------------------

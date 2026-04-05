@@ -210,7 +210,7 @@ class NLPIntakeEngine:
         Returns:
             IntakeResult with extracted experiment parameters.
         """
-        text = request.raw_text.strip()
+        text = request.text.strip()
         text_lower = text.lower()
 
         # Extract all entities

@@ -38,7 +38,7 @@ async def run_pipeline(request: str, output_dir: Path) -> None:
     orchestrator = PipelineOrchestrator(output_dir=output_dir)
 
     try:
-        result = await orchestrator.run_pipeline(request)
+        result = await orchestrator.run_experiment(request)
 
         logger.info(
             "Pipeline completed successfully",

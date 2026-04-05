@@ -1,0 +1,422 @@
+[
+  {
+    "rank": 1,
+    "compound": {
+      "name": "myostatin_lead_8",
+      "smiles": "CC1=CC(=CN=C1C2=CC3=C(C=C2)N(C3=O)C4=CC=CC=C4)C(=O)O",
+      "mw": 438.04,
+      "logp": 4.48,
+      "tpsa": 83.3,
+      "hbd": 2,
+      "hba": 5,
+      "source": "scaffold_library"
+    },
+    "efficacy_score": 0.235,
+    "safety_score": 0.72,
+    "admet_score": 0.72,
+    "novelty_score": 0.5,
+    "stage": "lead",
+    "recommendations": [
+      "Consider structural modifications to improve binding"
+    ]
+  },
+  {
+    "rank": 2,
+    "compound": {
+      "name": "myostatin_lead_16",
+      "smiles": "CC1=C(C2=CC=CC=C2N1)C3=CC4=C(C=C3)NN4C5=CC=CC=C5",
+      "mw": 426.24,
+      "logp": 4.46,
+      "tpsa": 75.4,
+      "hbd": 2,
+      "hba": 5,
+      "source": "scaffold_library"
+    },
+    "efficacy_score": 0.235,
+    "safety_score": 0.72,
+    "admet_score": 0.72,
+    "novelty_score": 0.5,
+    "stage": "lead",
+    "recommendations": [
+      "Consider structural modifications to improve binding"
+    ]
+  },
+  {
+    "rank": 3,
+    "compound": {
+      "name": "myostatin_lead_13",
+      "smiles": "CC1=C(C2=CC=CC=C2N1)C3=CC4=CC=CC=C4N=C3",
+      "mw": 392.67,
+      "logp": 4.45,
+      "tpsa": 97.8,
+      "hbd": 2,
+      "hba": 5,
+      "source": "scaffold_library"
+    },
+    "efficacy_score": 0.235,
+    "safety_score": 0.72,
+    "admet_score": 0.72,
+    "novelty_score": 0.5,
+    "stage": "lead",
+    "recommendations": [
+      "Consider structural modifications to improve binding"
+    ]
+  },
+  {
+    "rank": 4,
+    "compound": {
+      "name": "myostatin_lead_40",
+      "smiles": "CC1=CC(=NN1C2=CC=C(C=C2)C(=O)NO)C(=O)O",
+      "mw": 424.06,
+      "logp": 4.58,
+      "tpsa": 79.7,
+      "hbd": 2,
+      "hba": 5,
+      "source": "scaffold_library"
+    },
+    "efficacy_score": 0.235,
+    "safety_score": 0.72,
+    "admet_score": 0.72,
+    "novelty_score": 0.5,
+    "stage": "lead",
+    "recommendations": [
+      "Consider structural modifications to improve binding"
+    ]
+  },
+  {
+    "rank": 5,
+    "compound": {
+      "name": "myostatin_lead_14",
+      "smiles": "CC1=CC(=NN1C2=CC3=C(C=C2)N(C3=O)C4=CC=CC=C4)C(=O)O",
+      "mw": 461.86,
+      "logp": 4.39,
+      "tpsa": 79.0,
+      "hbd": 2,
+      "hba": 5,
+      "source": "scaffold_library"
+    },
+    "efficacy_score": 0.235,
+    "safety_score": 0.72,
+    "admet_score": 0.72,
+    "novelty_score": 0.5,
+    "stage": "lead",
+    "recommendations": [
+      "Consider structural modifications to improve binding"
+    ]
+  },
+  {
+    "rank": 6,
+    "compound": {
+      "name": "myostatin_lead_6",
+      "smiles": "CC1=CC(=NN1C2=CC3=C(C=C2)N(C3=O)CCNCC)C(=O)O",
+      "mw": 404.26,
+      "logp": 4.63,
+      "tpsa": 69.7,
+      "hbd": 2,
+      "hba": 5,
+      "source": "scaffold_library"
+    },
+    "efficacy_score": 0.235,
+    "safety_score": 0.72,
+    "admet_score": 0.72,
+    "novelty_score": 0.5,
+    "stage": "lead",
+    "recommendations": [
+      "Consider structural modifications to improve binding"
+    ]
+  },
+  {
+    "rank": 7,
+    "compound": {
+      "name": "myostatin_lead_3",
+      "smiles": "CC1=C(C2=CC=CC=C2N1)C3=CC4=C(C=C3)NC(=O)N4",
+      "mw": 474.97,
+      "logp": 4.2,
+      "tpsa": 84.3,
+      "hbd": 2,
+      "hba": 5,
+      "source": "scaffold_library"
+    },
+    "efficacy_score": 0.234,
+    "safety_score": 0.72,
+    "admet_score": 0.72,
+    "novelty_score": 0.5,
+    "stage": "lead",
+    "recommendations": [
+      "Consider structural modifications to improve binding"
+    ]
+  },
+  {
+    "rank": 8,
+    "compound": {
+      "name": "myostatin_lead_25",
+      "smiles": "CC1=CC(=NN1C2=CC3=C(C=C2)N(C3=O)CCOC)C(=O)O",
+      "mw": 377.51,
+      "logp": 4.82,
+      "tpsa": 78.1,
+      "hbd": 2,
+      "hba": 5,
+      "source": "scaffold_library"
+    },
+    "efficacy_score": 0.234,
+    "safety_score": 0.72,
+    "admet_score": 0.72,
+    "novelty_score": 0.5,
+    "stage": "lead",
+    "recommendations": [
+      "Consider structural modifications to improve binding"
+    ]
+  },
+  {
+    "rank": 9,
+    "compound": {
+      "name": "myostatin_lead_35",
+      "smiles": "CC1=C(C2=CN=CC=C2N1)C3=CC4=C(C=C3)N(C4=O)C5=CC=CC=C5",
+      "mw": 437.83,
+      "logp": 4.85,
+      "tpsa": 85.0,
+      "hbd": 2,
+      "hba": 5,
+      "source": "scaffold_library"
+    },
+    "efficacy_score": 0.234,
+    "safety_score": 0.72,
+    "admet_score": 0.72,
+    "novelty_score": 0.5,
+    "stage": "lead",
+    "recommendations": [
+      "Consider structural modifications to improve binding"
+    ]
+  },
+  {
+    "rank": 10,
+    "compound": {
+      "name": "myostatin_lead_45",
+      "smiles": "CC1=CC(=NN1C2=CC3=C(C=C2)N(C3=O)C4=CC=CC=C4)C(=O)O",
+      "mw": 409.22,
+      "logp": 4.87,
+      "tpsa": 79.2,
+      "hbd": 2,
+      "hba": 5,
+      "source": "scaffold_library"
+    },
+    "efficacy_score": 0.234,
+    "safety_score": 0.72,
+    "admet_score": 0.72,
+    "novelty_score": 0.5,
+    "stage": "lead",
+    "recommendations": [
+      "Consider structural modifications to improve binding"
+    ]
+  },
+  {
+    "rank": 11,
+    "compound": {
+      "name": "myostatin_lead_41",
+      "smiles": "CC1=CC(=NN1C2=CC3=C(C=C2)N(C3=O)CCNCC)C(=O)O",
+      "mw": 488.07,
+      "logp": 4.07,
+      "tpsa": 76.0,
+      "hbd": 2,
+      "hba": 5,
+      "source": "scaffold_library"
+    },
+    "efficacy_score": 0.234,
+    "safety_score": 0.72,
+    "admet_score": 0.72,
+    "novelty_score": 0.5,
+    "stage": "lead",
+    "recommendations": [
+      "Consider structural modifications to improve binding"
+    ]
+  },
+  {
+    "rank": 12,
+    "compound": {
+      "name": "myostatin_lead_21",
+      "smiles": "CC1=C(C2=CC=CS2N1)C3=CC4=C(C=C3)N(C4=O)C5=CC=CC=C5",
+      "mw": 475.96,
+      "logp": 4.93,
+      "tpsa": 80.8,
+      "hbd": 2,
+      "hba": 5,
+      "source": "scaffold_library"
+    },
+    "efficacy_score": 0.233,
+    "safety_score": 0.72,
+    "admet_score": 0.72,
+    "novelty_score": 0.5,
+    "stage": "lead",
+    "recommendations": [
+      "Consider structural modifications to improve binding"
+    ]
+  },
+  {
+    "rank": 13,
+    "compound": {
+      "name": "myostatin_lead_7",
+      "smiles": "CC1=C(C2=CC=CC=C2N1)C3=NC4=CC=CC=C4N=C3",
+      "mw": 483.5,
+      "logp": 4.95,
+      "tpsa": 84.2,
+      "hbd": 2,
+      "hba": 5,
+      "source": "scaffold_library"
+    },
+    "efficacy_score": 0.233,
+    "safety_score": 0.72,
+    "admet_score": 0.72,
+    "novelty_score": 0.5,
+    "stage": "lead",
+    "recommendations": [
+      "Consider structural modifications to improve binding"
+    ]
+  },
+  {
+    "rank": 14,
+    "compound": {
+      "name": "myostatin_lead_33",
+      "smiles": "CC1=CC(=CN=C1C2=CC3=C(C=C2)N(C3=O)C4=CC=CC=C4)C(=O)O",
+      "mw": 394.76,
+      "logp": 4.05,
+      "tpsa": 72.6,
+      "hbd": 2,
+      "hba": 5,
+      "source": "scaffold_library"
+    },
+    "efficacy_score": 0.233,
+    "safety_score": 0.72,
+    "admet_score": 0.72,
+    "novelty_score": 0.5,
+    "stage": "lead",
+    "recommendations": [
+      "Consider structural modifications to improve binding"
+    ]
+  },
+  {
+    "rank": 15,
+    "compound": {
+      "name": "myostatin_lead_29",
+      "smiles": "CC1=CC(=NN1C2=CC3=C(C=C2)OCCO3)C(=O)O",
+      "mw": 392.61,
+      "logp": 4.25,
+      "tpsa": 104.6,
+      "hbd": 2,
+      "hba": 5,
+      "source": "scaffold_library"
+    },
+    "efficacy_score": 0.234,
+    "safety_score": 0.64,
+    "admet_score": 0.64,
+    "novelty_score": 0.5,
+    "stage": "lead",
+    "recommendations": [
+      "Consider structural modifications to improve binding"
+    ]
+  },
+  {
+    "rank": 16,
+    "compound": {
+      "name": "myostatin_lead_48",
+      "smiles": "CC1=CC(=NN1C2=CC=C(C=C2)C(=O)N)C(=O)O",
+      "mw": 415.28,
+      "logp": 3.99,
+      "tpsa": 64.7,
+      "hbd": 2,
+      "hba": 5,
+      "source": "scaffold_library"
+    },
+    "efficacy_score": 0.233,
+    "safety_score": 0.64,
+    "admet_score": 0.64,
+    "novelty_score": 0.5,
+    "stage": "lead",
+    "recommendations": [
+      "Consider structural modifications to improve binding"
+    ]
+  },
+  {
+    "rank": 17,
+    "compound": {
+      "name": "myostatin_lead_19",
+      "smiles": "CC1=C(C2=CC=CC=C2N1)C3=NC4=CC=CC=C4N=C3",
+      "mw": 427.4,
+      "logp": 3.94,
+      "tpsa": 108.5,
+      "hbd": 2,
+      "hba": 5,
+      "source": "scaffold_library"
+    },
+    "efficacy_score": 0.233,
+    "safety_score": 0.64,
+    "admet_score": 0.64,
+    "novelty_score": 0.5,
+    "stage": "lead",
+    "recommendations": [
+      "Consider structural modifications to improve binding"
+    ]
+  },
+  {
+    "rank": 18,
+    "compound": {
+      "name": "myostatin_lead_34",
+      "smiles": "CC1=CC(=CN=C1C2=CC3=C(C=C2)N(C3=O)C4=CC=CC=C4)C(=O)O",
+      "mw": 360.14,
+      "logp": 3.94,
+      "tpsa": 95.7,
+      "hbd": 2,
+      "hba": 5,
+      "source": "scaffold_library"
+    },
+    "efficacy_score": 0.233,
+    "safety_score": 0.64,
+    "admet_score": 0.64,
+    "novelty_score": 0.5,
+    "stage": "lead",
+    "recommendations": [
+      "Consider structural modifications to improve binding"
+    ]
+  },
+  {
+    "rank": 19,
+    "compound": {
+      "name": "myostatin_lead_2",
+      "smiles": "CC1=C(C2=CC=CC=C2N1)C3=CC4=C(C=C3)NN4C5=CC=CC=C5",
+      "mw": 480.44,
+      "logp": 3.93,
+      "tpsa": 83.5,
+      "hbd": 2,
+      "hba": 5,
+      "source": "scaffold_library"
+    },
+    "efficacy_score": 0.233,
+    "safety_score": 0.64,
+    "admet_score": 0.64,
+    "novelty_score": 0.5,
+    "stage": "lead",
+    "recommendations": [
+      "Consider structural modifications to improve binding"
+    ]
+  },
+  {
+    "rank": 20,
+    "compound": {
+      "name": "myostatin_lead_9",
+      "smiles": "CC1=C(C2=CC=CC=C2N1)C3=CC4=C(C=C3)NN4C5=CC=CC=C5",
+      "mw": 389.21,
+      "logp": 3.88,
+      "tpsa": 87.1,
+      "hbd": 2,
+      "hba": 5,
+      "source": "scaffold_library"
+    },
+    "efficacy_score": 0.233,
+    "safety_score": 0.64,
+    "admet_score": 0.64,
+    "novelty_score": 0.5,
+    "stage": "lead",
+    "recommendations": [
+      "Consider structural modifications to improve binding"
+    ]
+  }
+]

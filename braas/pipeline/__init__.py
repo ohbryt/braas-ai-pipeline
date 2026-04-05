@@ -16,10 +16,11 @@ Orchestrates all 10 pipeline stages:
 """
 
 import asyncio
+from pathlib import Path
+from typing import Any, Callable
+from enum import Enum
 from dataclasses import dataclass, field
 from datetime import datetime
-from enum import Enum
-from typing import Any, Callable
 
 from braas.core.enums import ExperimentStatus, PipelineStage, ValidationStatus
 from braas.core.events import Event, EventBus, get_event_bus
@@ -97,12 +98,12 @@ class PipelineOrchestrator:
         PipelineStage.ANALYSIS,
         PipelineStage.REPORTING,
         PipelineStage.LEARNING,
-        PipelineStage.KNOWLEDGE,
     ]
     
-    def __init__(self):
+    def __init__(self, output_dir: str = "outputs"):
         """Initialize pipeline orchestrator with all stage handlers."""
-        self._event_bus = get_event_bus()
+        self._output_dir = Path(output_dir)
+        self._output_dir.mkdir(parents=True, exist_ok=True)
         self._model_registry = ModelRegistry()
         self._knowledge_graph = KnowledgeGraph()
         
@@ -122,7 +123,6 @@ class PipelineOrchestrator:
             PipelineStage.ANALYSIS: self._stage_analysis,
             PipelineStage.REPORTING: self._stage_reporting,
             PipelineStage.LEARNING: self._stage_learning,
-            PipelineStage.KNOWLEDGE: self._stage_knowledge,
         }
         
         # Track stage statuses
@@ -139,7 +139,7 @@ class PipelineOrchestrator:
         self._cancelled = False
     
     async def run_experiment(
-        self, experiment_request: dict[str, Any]
+        self, experiment_request: str | dict[str, Any]
     ) -> ExperimentResult:
         """Run complete experiment through all pipeline stages.
         
@@ -159,7 +159,7 @@ class PipelineOrchestrator:
             self._stage_results[stage] = None
         
         # Create experiment from request
-        experiment = self._create_experiment(experiment_request)
+        experiment = await self._create_experiment(experiment_request)
         self._current_experiment_id = experiment.experiment_id
         
         # Run pre-flight digital twin prediction
@@ -528,12 +528,33 @@ class PipelineOrchestrator:
         
         return output
     
-    def _create_experiment(self, request: dict[str, Any]) -> Experiment:
-        """Create Experiment from request dict."""
-        from braas.core.models import Experiment
+    async def _create_experiment(self, request: str | dict[str, Any]) -> Experiment:
+        """Create Experiment from string or dict request."""
+        from braas.core.models import Experiment, IntakeRequest
+        
+        if isinstance(request, str):
+            from braas.pipeline.intake import NLPIntakeEngine
+            engine = NLPIntakeEngine()
+            parsed = await engine.parse_request(IntakeRequest(text=request))
+            return Experiment(
+                experiment_id=f"exp-{datetime.now().strftime('%Y%m%d%H%M%S')}",
+                name=request[:60],
+                description=request,
+                experiment_type=parsed.get("experiment_type"),
+                status=ExperimentStatus.DRAFT,
+                priority=None,
+                safety_level=None,
+                protocol=None,
+                samples=[],
+                reagents=[],
+                schedule_slots=[],
+                owner_id="cli",
+                tags=["sarcopenia", "myostatin", "drug-discovery"],
+                metadata={"raw_request": request, "parsed": parsed}
+            )
         
         return Experiment(
-            experiment_id=request.get("experiment_id", ""),
+            experiment_id=request.get("experiment_id", f"exp-{datetime.now().strftime('%Y%m%d%H%M%S')}"),
             name=request.get("name", "Untitled Experiment"),
             description=request.get("description", ""),
             experiment_type=request.get("experiment_type"),
