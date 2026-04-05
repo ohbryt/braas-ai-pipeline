@@ -1,0 +1,58 @@
+[project]
+name = "braas"
+version = "0.1.0"
+description = "Bio Research-as-a-Service: Full AI-Based Automated Pipeline"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "pydantic",
+    "pydantic-settings",
+    "structlog",
+    "prometheus-client",
+    "scipy",
+    "scikit-learn",
+    "numpy",
+    "pandas",
+    "matplotlib",
+    "reportlab",
+    "python-pptx",
+    "joblib",
+    "pytest",
+    "pytest-asyncio",
+    "httpx",
+    "openai",
+    "anthropic",
+    "networkx",
+    "neo4j",
+    "sqlalchemy",
+    "aiohttp",
+    "paho-mqtt",
+    "python-multipart",
+    "jinja2",
+    "pillow",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+addopts = "-v --tb=short"
+
+[tool.black]
+line-length = 100
+target-version = ["py311"]
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[tool.mypy]
+python_version = "3.11"
+ignore_missing_imports = true
+warn_unused_ignores = true
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+select = ["ALL"]
+ignore = ["D", "S", "ANN101", "ANN102"]
